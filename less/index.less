@@ -58,6 +58,7 @@ html, body {
 	height: 100%;
 }
 
+
 h1
 {
 	font-size: 3rem;
@@ -88,6 +89,7 @@ nav
 	{
 		text-decoration: none;
 		font-size: 1.5rem;
+		color: gray;
 	}
 }
 
@@ -112,6 +114,7 @@ nav
 			width: fit-content;
 			padding: 20px 30px;
 			margin-top: 2%;
+			cursor: pointer;
 		}
 	}
 }
@@ -120,20 +123,45 @@ nav
 {
 	margin: 2%;
 	
-	.projects
+	ul
 	{
-		margin-top: 2%;
+		margin-top: 1%;
 
-		ul
+		li
 		{
+			font-size: 1.5rem;
 			margin-top: 1%;
+		}
+	}
 
-			li
+	.flexContainer
+	{
+		display: flex;
+		justify-content: space-evenly;
+
+		.about
+		{
+			word-wrap: break-word;
+			width: 50%;
+		}
+
+		.skills
+		{
+			width: 50%;
+			margin-left: 10%;
+			ul
 			{
-				font-size: 1.5rem;
-				margin-top: 1%;
+				border: 1px solid black;
+				width: 50%;
+
+				li
+				{
+					padding: 2%;
+					
+				}
 			}
 		}
+		
 	}
 	
 }
@@ -147,13 +175,13 @@ nav
 		font-size: 1.5rem;
 		margin-top: 1%;
 		border-collapse: collapse;
+		width: 60%;
 
 		th, td
 		{
 			text-align: center;
 			border: 1px solid black;
-			width: fit-content;
-			padding: 5% 5%;
+			padding: 5%;
 		}
 	}
 }

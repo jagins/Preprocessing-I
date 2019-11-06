@@ -155,6 +155,7 @@ nav {
 nav a {
   text-decoration: none;
   font-size: 1.5rem;
+  color: gray;
 }
 .topSection img {
   margin: 2%;
@@ -170,19 +171,36 @@ nav a {
   width: fit-content;
   padding: 20px 30px;
   margin-top: 2%;
+  cursor: pointer;
 }
 .middleSection {
   margin: 2%;
 }
-.middleSection .projects {
-  margin-top: 2%;
-}
-.middleSection .projects ul {
+.middleSection ul {
   margin-top: 1%;
 }
-.middleSection .projects ul li {
+.middleSection ul li {
   font-size: 1.5rem;
   margin-top: 1%;
+}
+.middleSection .flexContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+.middleSection .flexContainer .about {
+  word-wrap: break-word;
+  width: 50%;
+}
+.middleSection .flexContainer .skills {
+  width: 50%;
+  margin-left: 10%;
+}
+.middleSection .flexContainer .skills ul {
+  border: 1px solid black;
+  width: 50%;
+}
+.middleSection .flexContainer .skills ul li {
+  padding: 2%;
 }
 .bottomSection {
   text-align: center;
@@ -192,13 +210,13 @@ nav a {
   font-size: 1.5rem;
   margin-top: 1%;
   border-collapse: collapse;
+  width: 60%;
 }
 .bottomSection table th,
 .bottomSection table td {
   text-align: center;
   border: 1px solid black;
-  width: fit-content;
-  padding: 5% 5%;
+  padding: 5%;
 }
 footer {
   text-align: center;
