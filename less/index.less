@@ -50,10 +50,165 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 62.5%;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|VT323&display=swap');
+//variables
+@colorBlack: black;
+@headingFont: 'VT323', monospace;
+@pFont: 'Permanent Marker', cursive;
+
+.fontGame()
+{
+	font-family: @headingFont;
+}
+
+.fontMarker()
+{
+	font-family: @pFont;
+}
+
+.flexCenter()
+{
+	display:flex;
+	justify-content: space-evenly;
+}
+
+h1
+{
+	font-size: 3rem;
+	.fontGame();
+}
+
+h3
+{
+	font-size: 2.0rem;
+	margin-top: 2%;
+	.fontGame();
+}
+
+
+p
+{
+	font-size: 1.5rem;
+	margin-top: 1%;
+	.fontMarker();
+}
+
+li
+{
+	.fontMarker();
+}
+
+nav
+{
+	margin-top: 2%;
+	.flexCenter();
+	align-items: center;
+	
+	a
+	{
+		text-decoration: none;
+		font-size: 1.5rem;
+		color: gray;
+	}
+}
+
+
+.topSection
+{
+	img
+	{
+		margin: 2%;
+		height: 20%;
+		width: 20%;
+	}
+
+	div
+	{
+		width: 50%;
+		margin: 2%;
+
+		.button
+		{
+			border: 1px solid @colorBlack;
+			width: fit-content;
+			padding: 20px 30px;
+			margin-top: 2%;
+			cursor: pointer;
+		}
+	}
+}
+
+.middleSection
+{
+	margin: 2%;
+
+	.flexContainer
+	{
+		.flexCenter();
+		
+		@media(max-width: 500px)
+		{
+			flex-direction: column;
+		}
+		.about
+		{
+			word-wrap: break-word;
+			width: 50%;
+		}
+
+		.skills
+		{
+			width: 50%;
+			margin-left: 10%;
+			ul
+			{
+				border: 1px solid @colorBlack;
+				width: 50%;
+
+				li
+				{
+					padding: 2%;
+				}
+			}
+		}
+	}
+}
+
+.bottomSection
+{
+	text-align: center;
+	table
+	{
+		margin: 0 auto;
+		font-size: 1.5rem;
+		margin-top: 1%;
+		border-collapse: collapse;
+		width: 50%;
+
+		th, td
+		{
+			text-align: center;
+			border: 1px solid @colorBlack;
+			padding: 5%;
+			.fontMarker();
+		}
+	}
+}
+
+footer
+{
+	text-align: center;
+	margin: 2%;
+	p
+	{
+		.fontGame();
+	}
+}

@@ -1,1 +1,246 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+html,
+body {
+  height: 100%;
+}
+@font-face {
+  font-family: 'Permanent Marker';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Permanent Marker Regular'), local('PermanentMarker-Regular'), url(https://fonts.gstatic.com/s/permanentmarker/v9/Fh4uPib9Iyv2ucM6pGQMWimMp004La2Ceg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'VT323';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('VT323 Regular'), local('VT323-Regular'), url(https://fonts.gstatic.com/s/vt323/v11/pxiKyp0ihIEF2isfFJA.ttf) format('truetype');
+}
+h1 {
+  font-size: 3rem;
+  font-family: 'VT323', monospace;
+}
+h3 {
+  font-size: 2rem;
+  margin-top: 2%;
+  font-family: 'VT323', monospace;
+}
+p {
+  font-size: 1.5rem;
+  margin-top: 1%;
+  font-family: 'Permanent Marker', cursive;
+}
+li {
+  font-family: 'Permanent Marker', cursive;
+}
+nav {
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+nav a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: gray;
+}
+.topSection img {
+  margin: 2%;
+  height: 20%;
+  width: 20%;
+}
+.topSection div {
+  width: 50%;
+  margin: 2%;
+}
+.topSection div .button {
+  border: 1px solid black;
+  width: fit-content;
+  padding: 20px 30px;
+  margin-top: 2%;
+  cursor: pointer;
+}
+.middleSection {
+  margin: 2%;
+}
+.middleSection .flexContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+@media (max-width: 500px) {
+  .middleSection .flexContainer {
+    flex-direction: column;
+  }
+}
+.middleSection .flexContainer .about {
+  word-wrap: break-word;
+  width: 50%;
+}
+.middleSection .flexContainer .skills {
+  width: 50%;
+  margin-left: 10%;
+}
+.middleSection .flexContainer .skills ul {
+  border: 1px solid black;
+  width: 50%;
+}
+.middleSection .flexContainer .skills ul li {
+  padding: 2%;
+}
+.bottomSection {
+  text-align: center;
+}
+.bottomSection table {
+  margin: 0 auto;
+  font-size: 1.5rem;
+  margin-top: 1%;
+  border-collapse: collapse;
+  width: 50%;
+}
+.bottomSection table th,
+.bottomSection table td {
+  text-align: center;
+  border: 1px solid black;
+  padding: 5%;
+  font-family: 'Permanent Marker', cursive;
+}
+footer {
+  text-align: center;
+  margin: 2%;
+}
+footer p {
+  font-family: 'VT323', monospace;
+}
