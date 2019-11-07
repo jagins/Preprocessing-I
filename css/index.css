@@ -135,16 +135,36 @@ html,
 body {
   height: 100%;
 }
+@font-face {
+  font-family: 'Permanent Marker';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Permanent Marker Regular'), local('PermanentMarker-Regular'), url(https://fonts.gstatic.com/s/permanentmarker/v9/Fh4uPib9Iyv2ucM6pGQMWimMp004La2Ceg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'VT323';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('VT323 Regular'), local('VT323-Regular'), url(https://fonts.gstatic.com/s/vt323/v11/pxiKyp0ihIEF2isfFJA.ttf) format('truetype');
+}
 h1 {
   font-size: 3rem;
+  font-family: 'VT323', monospace;
 }
 h3 {
   font-size: 2rem;
   margin-top: 2%;
+  font-family: 'VT323', monospace;
 }
 p {
   font-size: 1.5rem;
   margin-top: 1%;
+  font-family: 'Permanent Marker', cursive;
+}
+li {
+  font-family: 'Permanent Marker', cursive;
 }
 nav {
   margin-top: 2%;
@@ -176,16 +196,14 @@ nav a {
 .middleSection {
   margin: 2%;
 }
-.middleSection ul {
-  margin-top: 1%;
-}
-.middleSection ul li {
-  font-size: 1.5rem;
-  margin-top: 1%;
-}
 .middleSection .flexContainer {
   display: flex;
   justify-content: space-evenly;
+}
+@media (max-width: 500px) {
+  .middleSection .flexContainer {
+    flex-direction: column;
+  }
 }
 .middleSection .flexContainer .about {
   word-wrap: break-word;
@@ -210,15 +228,19 @@ nav a {
   font-size: 1.5rem;
   margin-top: 1%;
   border-collapse: collapse;
-  width: 60%;
+  width: 50%;
 }
 .bottomSection table th,
 .bottomSection table td {
   text-align: center;
   border: 1px solid black;
   padding: 5%;
+  font-family: 'Permanent Marker', cursive;
 }
 footer {
   text-align: center;
   margin: 2%;
+}
+footer p {
+  font-family: 'VT323', monospace;
 }

@@ -58,16 +58,39 @@ html, body {
 	height: 100%;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|VT323&display=swap');
+//variables
+@colorBlack: black;
+@headingFont: 'VT323', monospace;
+@pFont: 'Permanent Marker', cursive;
+
+.fontGame()
+{
+	font-family: @headingFont;
+}
+
+.fontMarker()
+{
+	font-family: @pFont;
+}
+
+.flexCenter()
+{
+	display:flex;
+	justify-content: space-evenly;
+}
 
 h1
 {
 	font-size: 3rem;
+	.fontGame();
 }
 
 h3
 {
 	font-size: 2.0rem;
 	margin-top: 2%;
+	.fontGame();
 }
 
 
@@ -75,14 +98,18 @@ p
 {
 	font-size: 1.5rem;
 	margin-top: 1%;
+	.fontMarker();
 }
 
+li
+{
+	.fontMarker();
+}
 
 nav
 {
 	margin-top: 2%;
-	display: flex;
-	justify-content: space-evenly;
+	.flexCenter();
 	align-items: center;
 	
 	a
@@ -110,7 +137,7 @@ nav
 
 		.button
 		{
-			border: 1px solid black;
+			border: 1px solid @colorBlack;
 			width: fit-content;
 			padding: 20px 30px;
 			margin-top: 2%;
@@ -122,23 +149,15 @@ nav
 .middleSection
 {
 	margin: 2%;
-	
-	ul
-	{
-		margin-top: 1%;
-
-		li
-		{
-			font-size: 1.5rem;
-			margin-top: 1%;
-		}
-	}
 
 	.flexContainer
 	{
-		display: flex;
-		justify-content: space-evenly;
-
+		.flexCenter();
+		
+		@media(max-width: 500px)
+		{
+			flex-direction: column;
+		}
 		.about
 		{
 			word-wrap: break-word;
@@ -151,19 +170,16 @@ nav
 			margin-left: 10%;
 			ul
 			{
-				border: 1px solid black;
+				border: 1px solid @colorBlack;
 				width: 50%;
 
 				li
 				{
 					padding: 2%;
-					
 				}
 			}
 		}
-		
 	}
-	
 }
 
 .bottomSection
@@ -175,13 +191,14 @@ nav
 		font-size: 1.5rem;
 		margin-top: 1%;
 		border-collapse: collapse;
-		width: 60%;
+		width: 50%;
 
 		th, td
 		{
 			text-align: center;
-			border: 1px solid black;
+			border: 1px solid @colorBlack;
 			padding: 5%;
+			.fontMarker();
 		}
 	}
 }
@@ -190,4 +207,8 @@ footer
 {
 	text-align: center;
 	margin: 2%;
+	p
+	{
+		.fontGame();
+	}
 }
